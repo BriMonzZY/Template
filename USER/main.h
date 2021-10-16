@@ -4,14 +4,14 @@
 
 
 /**********************************全局状态*******************************************/
-/* LCD IPS */#define USE_IPS				/* USE_LCD				USE_IPS		LCD和IPS不能共存显示*/
-/* 舵机 */#define USE_STEER		/* NOT_USE_STEER		USE_STEER	是否使用舵机 舵机和LCD不能共存*/
+/* LCD IPS */#define USE_LCD				/* USE_LCD				USE_IPS		LCD和IPS不能共存显示*/
+/* 舵机 */#define NOT_USE_STEER		/* NOT_USE_STEER		USE_STEER	是否使用舵机 舵机和LCD不能共存*/
 /* 电机 */#define NOT_USE_MORTOR		/* NOT_USE_MORTOR		USE_MORTOR */
 /* 编码器 */#define USE_ENCODER		/* NOT_USE_ENCODER		USE_ENCODER */
 /* 无线串口 */#define NOT_USE_WIRELESS	/* NOT_USE_WIRELESS		USE_WIRELESS */
 /* 陀螺仪 */#define	NOT_USE_ICM20602	/* USE_ICM20602_1		USE_ICM20602_2 */
 /* 激光测距 */#define NOT_USE_LASER_RANGING/* NOT_USE_LASER_RANGING USE_LASER_RANGING */
-/* 蜂鸣器开关 */#define BEEP_OFF   /* BEEP_ON BEEP_OFF */
+/* 蜂鸣器开关 */#define BEEP_ON   /* BEEP_ON BEEP_OFF */
 
 
 /* 一共有几个模式(包括INIT模式) */#define NUM_OF_MODES 4
@@ -53,6 +53,7 @@ enum estaSystem {  /* 枚举系统状态   系统状态的初始化顺序要和ips显示屏上显示的顺
 	extern u16 screen_cnt;
 	extern u8 keyValue;
 	extern u16 ipsPointerPosition;
+	extern u16 screen_cnt;
 #endif
 
 

@@ -15,6 +15,8 @@ u16 lastpos[5][2];		/* 最后一次的数据 */
 
 u16 pointer_x1 = 100, pointer_y1 = 7, pointer_x2 = 105, pointer_y2 = 12;  /* ips矩形指针的位置参数 */
 int ipsInputNum = 0;
+int manualInputNum1 = 0;
+int manualInputNum2 = 0;
 
 
 /**
@@ -189,11 +191,10 @@ void Draw_INIT_Screen(void)
 		LCD_DrawRectangle(75, 320, 195, 370); 	/* AUTO2 */
 		LCD_DrawRectangle(75, 370, 195, 420); 	/* FOLLOW */
 		POINT_COLOR=CYAN;
-		LCD_ShowString(100,20,120,120,24,"WELCOM");
-		LCD_ShowString(90,230,100,100,32,"MANUAL");
-		LCD_ShowString(95,280,100,100,32,"AUTO1");
-		LCD_ShowString(95,330,100,100,32,"AUTO2");	
-		LCD_ShowString(95,380,100,100,32,"FOLLOW");
+		LCD_ShowString(90,230,100,100,32,(u8*)"MANUAL");
+		LCD_ShowString(95,280,100,100,32,(u8*)"AUTO1");
+		LCD_ShowString(95,330,100,100,32,(u8*)"AUTO2");	
+		LCD_ShowString(95,380,100,100,32,(u8*)"FOLLOW");
 	#endif
 	#if defined(USE_IPS)
 		ips114_clear(WHITE);
@@ -215,8 +216,84 @@ void Draw_INIT_Screen(void)
 void Draw_MAUAL_Screen(void)
 {
 	#if defined(USE_LCD)
+		LCD_Clear(WHITE);
+		manualInputNum1= 0;
+		manualInputNum2 = 0;
+		/* 绘制界面 */
 		
+		/* num1 */
+		POINT_COLOR=BLUE;
+		LCD_DrawRectangle(140, 240, 180, 280);	//1
+		LCD_DrawRectangle(180, 240, 220, 280);	//2
+		LCD_DrawRectangle(220, 240, 260, 280);	//3
+		LCD_DrawRectangle(140, 280, 180, 320);	//4
+		LCD_DrawRectangle(180, 280, 220, 320);	//5
+		LCD_DrawRectangle(220, 280, 260, 320);	//6
+		LCD_DrawRectangle(140, 320, 180, 360);	//7
+		LCD_DrawRectangle(180, 320, 220, 360);	//8
+		LCD_DrawRectangle(220, 320, 260, 360);	//9
+		LCD_DrawRectangle(180, 360, 220, 400);	//0
+		LCD_DrawRectangle(220, 360, 260, 400);	//back
+		LCD_DrawRectangle(140, 360, 180, 400);	//enter
+
+		POINT_COLOR=CYAN;
+		LCD_ShowString(150,200,120,120,24,(u8*)"Distance");
+		LCD_ShowString(145,245,120,120,24,(u8*)"1");
+		LCD_ShowString(185,245,120,120,24,(u8*)"2");
+		LCD_ShowString(225,245,120,120,24,(u8*)"3");
+		LCD_ShowString(145,285,120,120,24,(u8*)"4");
+		LCD_ShowString(185,285,120,120,24,(u8*)"5");
+		LCD_ShowString(225,285,120,120,24,(u8*)"6");
+		LCD_ShowString(145,325,120,120,24,(u8*)"7"); 
+		LCD_ShowString(185,325,120,120,24,(u8*)"8");
+		LCD_ShowString(225,325,120,120,24,(u8*)"9");
+		LCD_ShowString(185,365,120,120,24,(u8*)"0");
+		LCD_ShowString(225,365,120,120,24,(u8*)"Ba");
+		LCD_ShowString(145,365,120,120,24,(u8*)"Cl");
+		
+		
+		/* num2 */
+		POINT_COLOR=BLUE;
+		LCD_DrawRectangle(10, 240, 50, 280);	//1
+		LCD_DrawRectangle(50, 240, 90, 280);	//2
+		LCD_DrawRectangle(90, 240, 130, 280);	//3
+		LCD_DrawRectangle(10, 280, 50, 320);	//4
+		LCD_DrawRectangle(50, 280, 90, 320);	//5
+		LCD_DrawRectangle(90, 280, 130, 320);	//6
+		LCD_DrawRectangle(10, 320, 50, 360);	//7
+		LCD_DrawRectangle(50, 320, 90, 360);	//8
+		LCD_DrawRectangle(90, 320, 130, 360);	//9
+		LCD_DrawRectangle(50, 360, 90, 400);	//0
+		LCD_DrawRectangle(90, 360, 130, 400);	//back
+		LCD_DrawRectangle(10, 360, 50, 400);	//enter
+		LCD_DrawRectangle(95, 435, 250, 470); // back to init
+		LCD_DrawRectangle(70, 130, 200, 170);  // fire
+		
+		POINT_COLOR=CYAN;
+		LCD_ShowString(20,200,120,120,24,(u8*)"Angle");
+		LCD_ShowString(145-130,245,120,120,24,(u8*)"1");
+		LCD_ShowString(185-130,245,120,120,24,(u8*)"2");
+		LCD_ShowString(225-130,245,120,120,24,(u8*)"3");
+		LCD_ShowString(145-130,285,120,120,24,(u8*)"4");
+		LCD_ShowString(185-130,285,120,120,24,(u8*)"5");
+		LCD_ShowString(225-130,285,120,120,24,(u8*)"6");
+		LCD_ShowString(145-130,325,120,120,24,(u8*)"7"); 
+		LCD_ShowString(185-130,325,120,120,24,(u8*)"8");
+		LCD_ShowString(225-130,325,120,120,24,(u8*)"9");
+		LCD_ShowString(55,365,120,120,24,(u8*)"0");
+		LCD_ShowString(95,365,120,120,24,(u8*)"Ba");  /* 退格 */
+		LCD_ShowString(15,365,120,120,24,(u8*)"Cl");  /* 清除 */
+		LCD_ShowString(100,440,200,120,24,(u8*)"back to init");
+		LCD_ShowString(110,135,200,120,24,(u8*)"Confirm");
+		
+		
+		LCD_ShowString(20,60,120,120,24,(u8*)"num1:");
+		LCD_ShowString(20,90,120,120,24,(u8*)"num2:");
+		
+		LCD_ShowString(230,60,120,120,24,(u8*)"");  /* 单位 */
+		LCD_ShowString(230,90,120,120,24,(u8*)"");
 	#endif
+	
 	#if defined(USE_IPS)
 		ips114_clear(WHITE);
 	
@@ -239,7 +316,7 @@ void Draw_MAUAL_Screen(void)
 		ips114_showstr(130, 3, (uint8*)"+");
 		ips114_showstr(130, 4, (uint8*)"-");
 		ips114_showstr(130, 5, (uint8*)"*");
-		ips114_showstr(130, 6, (uint8*)"/");
+		ips114_showstr(130, 6, (uint8*)"back");
 	#endif
 }
 
@@ -386,10 +463,151 @@ void AUTO1_Action(void)
 void MANUAL_Action(void)
 {
 	#if defined(USE_LCD)
-		
+		LCD_ShowxNum(150,60,manualInputNum1,6,24,0XFE);
+		LCD_ShowxNum(150,90,manualInputNum2,6,24,0XFE);
+		if(screen_cnt == 1) {
+			
+			if(tp_dev.x[t] >= 140 && tp_dev.x[t] <= 180 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 1;
+			}
+			/* manualInputNum2 2 */
+			if(tp_dev.x[t] >= 180 && tp_dev.x[t] <= 220 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 2;
+			}
+			/* manualInputNum2 3 */
+			if(tp_dev.x[t] >= 220 && tp_dev.x[t] <= 260 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 3;
+			}
+			/* manualInputNum2 4 */
+			if(tp_dev.x[t] >= 140 && tp_dev.x[t] <= 180 && tp_dev.y[t] >= 280 && tp_dev.y[t] <= 320){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 4;
+			}
+			/* manualInputNum1 5 */
+			if(tp_dev.x[t] >= 180 && tp_dev.x[t] <= 220 && tp_dev.y[t] >= 280 && tp_dev.y[t] <= 320){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 5;
+			}
+			/* manualInputNum1 6 */
+			if(tp_dev.x[t] >= 220 && tp_dev.x[t] <= 260 && tp_dev.y[t] >= 280 && tp_dev.y[t] <= 320){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 6;
+			}
+			/* manualInputNum2 7 */
+			if(tp_dev.x[t] >= 140 && tp_dev.x[t] <= 180 && tp_dev.y[t] >= 320 && tp_dev.y[t] <= 360){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 7;
+			}
+			/* manualInputNum2 8 */
+			if(tp_dev.x[t] >= 180 && tp_dev.x[t] <= 220 && tp_dev.y[t] >= 320 && tp_dev.y[t] <= 360){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 8;
+			}
+			/* manualInputNum2 9 */
+			if(tp_dev.x[t] >= 220 && tp_dev.x[t] <= 260 && tp_dev.y[t] >= 320 && tp_dev.y[t] <= 360){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 9;
+			}
+			/* manualInputNum2 0 */
+			if(tp_dev.x[t] >= 180 && tp_dev.x[t] <= 220 && tp_dev.y[t] >= 360 && tp_dev.y[t] <= 400){
+				BEEP_ONCE();
+				manualInputNum2 = manualInputNum2*10 + 0;
+			}
+			/* manualInputNum2 back */
+			if(tp_dev.x[t] >= 220 && tp_dev.x[t] <= 260 && tp_dev.y[t] >= 360 && tp_dev.y[t] <= 400){
+				BEEP_ONCE();
+				manualInputNum2/=10;
+			}
+			/* manualInputNum2 clear */
+			if(tp_dev.x[t] >= 140 && tp_dev.x[t] <= 180 && tp_dev.y[t] >= 360 && tp_dev.y[t] <= 400){
+				BEEP_ONCE();
+				manualInputNum2 = 0;
+			}
+
+
+
+
+			/* manualInputNum1 1 */
+			if(tp_dev.x[t] >= 140-130 && tp_dev.x[t] <= 180-130 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 1;
+			}
+			/* manualInputNum1 2 */
+			if(tp_dev.x[t] >= 180-130 && tp_dev.x[t] <= 220-130 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 2;
+			}
+			/* manualInputNum1 3 */
+			if(tp_dev.x[t] >= 220-130 && tp_dev.x[t] <= 260-130 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 3;
+			}
+			/* manualInputNum1 4 */
+			if(tp_dev.x[t] >= 140-130 && tp_dev.x[t] <= 180-130 && tp_dev.y[t] >= 280 && tp_dev.y[t] <= 320){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 4;
+			}
+			/* manualInputNum1 5 */
+			if(tp_dev.x[t] >= 180-130 && tp_dev.x[t] <= 220-130 && tp_dev.y[t] >= 280 && tp_dev.y[t] <= 320){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 5;
+			}
+			/* manualInputNum1 6 */
+			if(tp_dev.x[t] >= 220-130 && tp_dev.x[t] <= 260-130 && tp_dev.y[t] >= 280 && tp_dev.y[t] <= 320){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 6;
+			}
+			/* manualInputNum1 7 */
+			if(tp_dev.x[t] >= 140-130 && tp_dev.x[t] <= 180-130 && tp_dev.y[t] >= 320 && tp_dev.y[t] <= 360){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 7;
+			}
+			/* manualInputNum1 8 */
+			if(tp_dev.x[t] >= 180-130 && tp_dev.x[t] <= 220-130 && tp_dev.y[t] >= 320 && tp_dev.y[t] <= 360){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 8;
+			}
+			/* manualInputNum1 9 */
+			if(tp_dev.x[t] >= 220-130 && tp_dev.x[t] <= 260-130 && tp_dev.y[t] >= 320 && tp_dev.y[t] <= 360){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 9;
+			}
+			/* manualInputNum1 0 */
+			if(tp_dev.x[t] >= 180-130 && tp_dev.x[t] <= 220-130 && tp_dev.y[t] >= 360 && tp_dev.y[t] <= 400){
+				BEEP_ONCE();
+				manualInputNum1 = manualInputNum1*10 + 0;
+			}
+			/* manualInputNum1 back */
+			if(tp_dev.x[t] >= 220-130 && tp_dev.x[t] <= 260-130 && tp_dev.y[t] >= 360 && tp_dev.y[t] <= 400){
+				BEEP_ONCE();
+				manualInputNum1/=10;
+			}
+			/* manualInputNum1 clear */
+			if(tp_dev.x[t] >= 140-130 && tp_dev.x[t] <= 180-130 && tp_dev.y[t] >= 360 && tp_dev.y[t] <= 400){
+				BEEP_ONCE();
+				manualInputNum1 = 0;
+			}
+
+			/* back to the init */
+			if(tp_dev.x[t] >= 95 && tp_dev.x[t] <= 250 && tp_dev.y[t] >= 435 && tp_dev.y[t] <= 470){
+				BEEP_ONCE();
+				staSystem = INIT;
+				Manual_To_Init();
+			}
+			/* confirm */
+			if(tp_dev.x[t] >= 70 && tp_dev.x[t] <= 200 && tp_dev.y[t] >= 130 && tp_dev.y[t] <= 170){
+				BEEP_ONCE();
+			}
+		}
 	#endif
 	
 	#if defined(USE_IPS)
+		
+		ipsInputNum = 0;
+	
 		if(keyValue == KEY0_PRES) {  /* 上一项 */
 			if(ipsPointerPosition > 1 && ipsPointerPosition < 9) {
 				ipsPointerPosition--;
@@ -432,7 +650,7 @@ void MANUAL_Action(void)
 				case 12: break;
 				case 13: ipsInputNum*=-1; break;
 				case 14: break;
-				case 15: break;
+				case 15: ipsInputNum/=10; break;
 				default: break;
 			}
 			
