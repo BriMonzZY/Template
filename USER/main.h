@@ -11,6 +11,7 @@
 /* 无线串口 */#define NOT_USE_WIRELESS	/* NOT_USE_WIRELESS		USE_WIRELESS */
 /* 陀螺仪 */#define	NOT_USE_ICM20602	/* USE_ICM20602_1		USE_ICM20602_2 */
 /* 激光测距 */#define NOT_USE_LASER_RANGING/* NOT_USE_LASER_RANGING USE_LASER_RANGING */
+/* 蜂鸣器开关 */#define BEEP_OFF   /* BEEP_ON BEEP_OFF */
 
 
 /* 一共有几个模式(包括INIT模式) */#define NUM_OF_MODES 4

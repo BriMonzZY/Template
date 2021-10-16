@@ -17,6 +17,7 @@ void Draw_MAUAL_Screen(void);
 void Draw_AUTO1_Screen(void);
 
 extern u16 pointer_x1, pointer_y1, pointer_x2, pointer_y2;
+extern int ipsInputNum;
 
 
 #endif

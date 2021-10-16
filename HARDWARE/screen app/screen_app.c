@@ -14,7 +14,7 @@ u8 i=0;
 u16 lastpos[5][2];		/* 最后一次的数据 */
 
 u16 pointer_x1 = 100, pointer_y1 = 7, pointer_x2 = 105, pointer_y2 = 12;  /* ips矩形指针的位置参数 */
-
+int ipsInputNum = 0;
 
 
 /**
@@ -238,6 +238,8 @@ void Draw_MAUAL_Screen(void)
 		ips114_showstr(130, 2, (uint8*)".");
 		ips114_showstr(130, 3, (uint8*)"+");
 		ips114_showstr(130, 4, (uint8*)"-");
+		ips114_showstr(130, 5, (uint8*)"*");
+		ips114_showstr(130, 6, (uint8*)"/");
 	#endif
 }
 
@@ -389,7 +391,7 @@ void MANUAL_Action(void)
 	
 	#if defined(USE_IPS)
 		if(keyValue == KEY0_PRES) {  /* 上一项 */
-			if(ipsPointerPosition > 1) {
+			if(ipsPointerPosition > 1 && ipsPointerPosition < 9) {
 				ipsPointerPosition--;
 				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, WHITE, 1);
 				pointer_y1-=16;
@@ -397,12 +399,52 @@ void MANUAL_Action(void)
 				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, BLACK, 1);
 				BEEP_ONCE();
 			}
+			else if(ipsPointerPosition == 9) {
+				ipsPointerPosition--;
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, WHITE, 1);  /* 清除之前的指针显示 */
+				pointer_x1 = 100, pointer_y1 = 7+16*7, pointer_x2 = 105, pointer_y2 = 12+16*7;  /* 重新确定位置 */
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, BLACK, 1);  /* 绘制 */
+			}
+			else if(ipsPointerPosition > 9 && ipsPointerPosition <= 15) {
+				ipsPointerPosition--;
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, WHITE, 1);
+				pointer_y1-=16;
+				pointer_y2-=16;
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, BLACK, 1);
+			}
 			keyValue = 0;  /* 恢复无按下的状态 */
 		}
+		
+		
 		else if(keyValue == KEY1_PRES) {  /* 确定  */
+			switch(ipsPointerPosition) {
+				case 1: ipsInputNum*=10; ipsInputNum+=0; break;
+				case 2: ipsInputNum*=10; ipsInputNum+=1; break;
+				case 3: ipsInputNum*=10; ipsInputNum+=2; break;
+				case 4: ipsInputNum*=10; ipsInputNum+=3; break;
+				case 5: ipsInputNum*=10; ipsInputNum+=4; break;
+				case 6: ipsInputNum*=10; ipsInputNum+=5; break;
+				case 7: ipsInputNum*=10; ipsInputNum+=6; break;
+				case 8: ipsInputNum*=10; ipsInputNum+=7; break;
+				case 9: ipsInputNum*=10; ipsInputNum+=8; break;
+				case 10: ipsInputNum*=10; ipsInputNum+=9; break;
+				case 11: break;
+				case 12: break;
+				case 13: ipsInputNum*=-1; break;
+				case 14: break;
+				case 15: break;
+				default: break;
+			}
+			
+			ips114_showint16(130, 7, ipsInputNum);
+			
+			
 			BEEP_ONCE();
 		}
+		
+		
 		else if(keyValue == KEY2_PRES) {  /* 下一项 */
+			/* 指针在第一列 */
 			if(ipsPointerPosition < 8) {
 				ipsPointerPosition++;
 				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, WHITE, 1);
@@ -411,14 +453,34 @@ void MANUAL_Action(void)
 				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, BLACK, 1);
 				BEEP_ONCE();
 			}
+			else if(ipsPointerPosition == 8) {  /* 第二列第一个 进行一下位置变换 */
+				ipsPointerPosition++;
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, WHITE, 1);  /* 清除之前的指针显示 */
+				pointer_x1 = 230, pointer_y1 = 7, pointer_x2 = 235, pointer_y2 = 12;  /* 重新确定位置 */
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, BLACK, 1);  /* 绘制 */
+			}
+			/* 指针在第二列 */
+			else if(ipsPointerPosition > 8 && ipsPointerPosition < 15) {
+				ipsPointerPosition++;
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, WHITE, 1);
+				pointer_y1+=16;
+				pointer_y2+=16;
+				ipsDrawRectangle(pointer_x1, pointer_y1, pointer_x2, pointer_y2, BLACK, 1);
+			}
 			keyValue = 0;  /* 恢复无按下的状态 */
 		}
+		
+		
 		else if(keyValue == KEY3_PRES) {  /* 返回 状态转移到INIT */
 			staSystem = INIT;
 			Manual_To_Init();
 			BEEP_ONCE();
 			keyValue = 0;  /* 恢复无按下的状态 */
 		}
+		
+		
+		
+		
 	#endif
 }
 
