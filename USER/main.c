@@ -1,6 +1,7 @@
 /**
  * @project	
  * @author 五月花队
+ * @members	潘璇岳 张中尧 孙昕
  * @brief 电赛
  * @version 0.1
  * @date 2021-8-4
@@ -165,14 +166,14 @@ void globalInit(void)
 	
 	
 	/* 初始化激光测距 */
-	#if defined(NOT_USE_LASER_RANGING)
+	#if defined(USE_LASER_RANGING)
 		
 	#endif
 	
 	
 	/* 初始化陀螺仪 */
-	#if defined(NOT_USE_ICM20602)
-		
+	#if defined(USE_ICM20602)
+		icm20602_init_simspi();
 	#endif
 	
 	printf("[info] main.c : init finished\n\n");	
@@ -182,11 +183,11 @@ void globalInit(void)
 
 void Error_Handler(void)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
-  /* USER CODE END Error_Handler_Debug */
+	/* USER CODE BEGIN Error_Handler_Debug */
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1)
+	{
+	}
+	/* USER CODE END Error_Handler_Debug */
 }

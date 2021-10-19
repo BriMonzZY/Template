@@ -38,14 +38,37 @@
 #include "status_transmit.h"
 #include "beep.h"
 #include "motor.h"
+#include "SEEKFREE_ICM20602.h"
+#include "attitude_solution.h"
+#include "control.h"
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+#include <stdarg.h>
 
 
 /* 状态机状态 */
 enum estaSystem {  /* 枚举系统状态   系统状态的初始化顺序要和ips显示屏上显示的顺序一致 */
 	INIT, MANUAL, AUTO1, AUTO2, FOLLOW
 };
+
+
+typedef struct PID{
+	double SetPoint;            //设定值
+	double Kp;                  //比例系数
+	double Ki;                  //积分系数
+	double Kd;                  //微分系数
+	double LastError;           //最后一次误差数Er[-1]
+	double PrevError;           //最后第二次误差数er[-2]
+	double SumError;            //误差积分  
+}PID;
+
+
+typedef struct STACK{
+	unsigned char stack[100];
+	unsigned int stack_top;
+}STACK;
+
 
 /* global extern */
 #ifndef _MAIN_C
@@ -71,6 +94,16 @@ enum estaSystem {  /* 枚举系统状态   系统状态的初始化顺序要和ips显示屏上显示的顺
 #define IPS114_SDA_GPIO_Port GPIOD
 #define IPS114_SCL_Pin GPIO_PIN_10
 #define IPS114_SCL_GPIO_Port GPIOD
+
+/* ICM20602引脚定义 */
+#define ICM20602_SCK_Pin GPIO_PIN_7
+#define ICM20602_SCK_GPIO_Port GPIOD
+#define ICM20602_MOSI_Pin GPIO_PIN_10
+#define ICM20602_MOSI_GPIO_Port GPIOG
+#define ICM20602_MISO_Pin GPIO_PIN_13
+#define ICM20602_MISO_GPIO_Port GPIOG
+#define ICM20602_CS_Pin GPIO_PIN_14
+#define ICM20602_CS_GPIO_Port GPIOG
 
 
 void Error_Handler(void);

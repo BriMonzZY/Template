@@ -465,8 +465,9 @@ void MANUAL_Action(void)
 	#if defined(USE_LCD)
 		LCD_ShowxNum(150,60,manualInputNum1,6,24,0XFE);
 		LCD_ShowxNum(150,90,manualInputNum2,6,24,0XFE);
+	
 		if(screen_cnt == 1) {
-			
+			/* manualInputNum2 1 */
 			if(tp_dev.x[t] >= 140 && tp_dev.x[t] <= 180 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
 				BEEP_ONCE();
 				manualInputNum1 = manualInputNum1*10 + 1;

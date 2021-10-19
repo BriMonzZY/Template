@@ -6,7 +6,7 @@
 ..\obj\stm32f4xx_hal_can.o: ..\USER\stm32f4xx.h
 ..\obj\stm32f4xx_hal_can.o: ..\USER\stm32f429xx.h
 ..\obj\stm32f4xx_hal_can.o: ..\CORE\core_cm4.h
-..\obj\stm32f4xx_hal_can.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\stm32f4xx_hal_can.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stm32f4xx_hal_can.o: ..\CORE\core_cmInstr.h
 ..\obj\stm32f4xx_hal_can.o: ..\CORE\cmsis_armcc.h
 ..\obj\stm32f4xx_hal_can.o: ..\CORE\core_cmFunc.h
@@ -14,7 +14,7 @@
 ..\obj\stm32f4xx_hal_can.o: ..\USER\system_stm32f4xx.h
 ..\obj\stm32f4xx_hal_can.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\obj\stm32f4xx_hal_can.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\stm32f4xx_hal_can.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stm32f4xx_hal_can.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\stm32f4xx_hal_can.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\stm32f4xx_hal_can.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\stm32f4xx_hal_can.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h

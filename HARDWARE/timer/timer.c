@@ -14,6 +14,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		if(tim_cnt_10 >= 10) {
 			tim_cnt_10 = 0;
 			printf("%d, %d, %d, %d\n", Read_Encoder(1), Read_Encoder(2), Read_Encoder(3), Read_Encoder(4));
+			
+			
+			#if defined(NOT_USE_ICM20602)
+				get_icm20602_accdata_simspi();
+				get_icm20602_gyro_simspi();
+				IMU_quaterToEulerianAngles();  // ªÒ»°≈∑¿≠Ω«
+				printf("%.2f,%.2f,%.2f\n", eulerAngle.pitch, eulerAngle.roll, eulerAngle.yaw);
+			#endif
+			
 		}
 	}
 }

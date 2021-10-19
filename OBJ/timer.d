@@ -8,7 +8,7 @@
 ..\obj\timer.o: ..\USER\stm32f4xx.h
 ..\obj\timer.o: ..\USER\stm32f429xx.h
 ..\obj\timer.o: ..\CORE\core_cm4.h
-..\obj\timer.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\timer.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\timer.o: ..\CORE\core_cmInstr.h
 ..\obj\timer.o: ..\CORE\cmsis_armcc.h
 ..\obj\timer.o: ..\CORE\core_cmFunc.h
@@ -16,7 +16,7 @@
 ..\obj\timer.o: ..\USER\system_stm32f4xx.h
 ..\obj\timer.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\obj\timer.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\timer.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\timer.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\timer.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\timer.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\timer.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -81,7 +81,7 @@
 ..\obj\timer.o: ..\HARDWARE\LED\led.h
 ..\obj\timer.o: ..\HARDWARE\KEY\key.h
 ..\obj\timer.o: ..\HARDWARE\LCD\lcd.h
-..\obj\timer.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\timer.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\timer.o: ..\HARDWARE\SDRAM\sdram.h
 ..\obj\timer.o: ..\HARDWARE\TOUCH\touch.h
 ..\obj\timer.o: ..\HARDWARE\TOUCH\ott2001a.h
@@ -95,4 +95,9 @@
 ..\obj\timer.o: ..\HARDWARE\screen app\status_transmit.h
 ..\obj\timer.o: ..\HARDWARE\BEEP\beep.h
 ..\obj\timer.o: ..\HARDWARE\motor\motor.h
-..\obj\timer.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\timer.o: ..\HARDWARE\icm20602\SEEKFREE_ICM20602.h
+..\obj\timer.o: ..\HARDWARE\icm20602\attitude_solution.h
+..\obj\timer.o: ..\HARDWARE\control\control.h
+..\obj\timer.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
+..\obj\timer.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\timer.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h

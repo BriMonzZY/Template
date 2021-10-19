@@ -7,7 +7,7 @@
 ..\obj\stm32f4xx_it.o: ..\USER\stm32f4xx.h
 ..\obj\stm32f4xx_it.o: ..\USER\stm32f429xx.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cm4.h
-..\obj\stm32f4xx_it.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cmInstr.h
 ..\obj\stm32f4xx_it.o: ..\CORE\cmsis_armcc.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cmFunc.h
@@ -15,7 +15,7 @@
 ..\obj\stm32f4xx_it.o: ..\USER\system_stm32f4xx.h
 ..\obj\stm32f4xx_it.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\obj\stm32f4xx_it.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\stm32f4xx_it.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\stm32f4xx_it.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\stm32f4xx_it.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\stm32f4xx_it.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -80,7 +80,7 @@
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\LED\led.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\KEY\key.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\LCD\lcd.h
-..\obj\stm32f4xx_it.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\SDRAM\sdram.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\TOUCH\touch.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\TOUCH\ott2001a.h
@@ -94,5 +94,10 @@
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\screen app\status_transmit.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\BEEP\beep.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\motor\motor.h
-..\obj\stm32f4xx_it.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\icm20602\SEEKFREE_ICM20602.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\icm20602\attitude_solution.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\control\control.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stm32f4xx_it.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\stm32f4xx_it.o: stm32f4xx_it.h

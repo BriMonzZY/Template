@@ -324,7 +324,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\HARDWARE\screen app;..\HARDWARE\uart;..\HARDWARE\dma;..\HARDWARE\gpio;..\HARDWARE\BEEP;..\HARDWARE\ips114;..\HARDWARE\tim;..\HARDWARE\timer;..\HARDWARE\motor</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F4xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\SDRAM;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\HARDWARE\screen app;..\HARDWARE\uart;..\HARDWARE\dma;..\HARDWARE\gpio;..\HARDWARE\BEEP;..\HARDWARE\ips114;..\HARDWARE\tim;..\HARDWARE\timer;..\HARDWARE\motor;..\HARDWARE\icm20602;..\HARDWARE\stack;..\HARDWARE\control</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -662,6 +662,11 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\tim\tim.c</FilePath>
             </File>
+            <File>
+              <FileName>SEEKFREE_ICM20602.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\icm20602\SEEKFREE_ICM20602.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -691,6 +696,21 @@
               <FileName>motor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\motor\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>attitude_solution.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\icm20602\attitude_solution.c</FilePath>
+            </File>
+            <File>
+              <FileName>stack.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\stack\stack.c</FilePath>
+            </File>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\control\control.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -46,11 +46,15 @@
 "..\obj\seekfree_ips114_spi.o"
 "..\obj\ft5206.o"
 "..\obj\tim.o"
+"..\obj\seekfree_icm20602.o"
 "..\obj\beep.o"
 "..\obj\screen_app.o"
 "..\obj\status_transmit.o"
 "..\obj\timer.o"
 "..\obj\motor.o"
+"..\obj\attitude_solution.o"
+"..\obj\stack.o"
+"..\obj\control.o"
 --library_type=microlib --strict --scatter "..\OBJ\TOUCH.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -905,16 +905,16 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=..\obj\startup_stm32f429xx.d -o..\obj\startup_stm32f429xx.o -I.
-\RTE\_TOUCH -ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Devi
-ce\ST\STM32F4xx\Include -ID:\app\keil\ARM\CMSIS\Include --predefine="__MICROLIB
- SETA 1" --predefine="__UVISION_VERSION SETA 526" --predefine="STM32F429xx SETA
+\RTE\_TOUCH -ID:\app\keilARM\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\D
+evice\ST\STM32F4xx\Include -ID:\app\keilARM\ARM\CMSIS\Include --predefine="__MI
+CROLIB SETA 1" --predefine="__UVISION_VERSION SETA 526" --predefine="STM32F429x
 
 
 
 ARM Macro Assembler    Page 15 
 
 
- 1" --list=..\obj\startup_stm32f429xx.lst ..\CORE\startup_stm32f429xx.s
+x SETA 1" --list=..\obj\startup_stm32f429xx.lst ..\CORE\startup_stm32f429xx.s
 
 
 
