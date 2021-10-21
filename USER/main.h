@@ -4,10 +4,10 @@
 
 
 /**********************************全局状态*******************************************/
-/* LCD IPS */#define USE_LCD				/* USE_LCD				USE_IPS		LCD和IPS不能共存显示*/
+/* LCD IPS */#define USE_LCD				/* USE_LCD				USE_IPS		LCD和IPS不能共存显示     LCD和TIM1编码器冲突*/
 /* 舵机 */#define NOT_USE_STEER		/* NOT_USE_STEER		USE_STEER	是否使用舵机 舵机和LCD不能共存*/
 /* 电机 */#define NOT_USE_MORTOR		/* NOT_USE_MORTOR		USE_MORTOR */
-/* 编码器 */#define USE_ENCODER		/* NOT_USE_ENCODER		USE_ENCODER */
+/* 编码器 */#define NOT_USE_ENCODER		/* NOT_USE_ENCODER		USE_ENCODER */
 /* 无线串口 */#define NOT_USE_WIRELESS	/* NOT_USE_WIRELESS		USE_WIRELESS */
 /* 陀螺仪 */#define	NOT_USE_ICM20602	/* USE_ICM20602_1		USE_ICM20602_2 */
 /* 激光测距 */#define NOT_USE_LASER_RANGING/* NOT_USE_LASER_RANGING USE_LASER_RANGING */

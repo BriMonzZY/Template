@@ -4,7 +4,7 @@
 ..\obj\delay.o: ..\USER\stm32f4xx.h
 ..\obj\delay.o: ..\USER\stm32f429xx.h
 ..\obj\delay.o: ..\CORE\core_cm4.h
-..\obj\delay.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\delay.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\delay.o: ..\CORE\core_cmInstr.h
 ..\obj\delay.o: ..\CORE\cmsis_armcc.h
 ..\obj\delay.o: ..\CORE\core_cmFunc.h
@@ -16,7 +16,7 @@
 ..\obj\delay.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 ..\obj\delay.o: ..\USER\stm32f4xx.h
 ..\obj\delay.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\delay.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\delay.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\delay.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\delay.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\delay.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h

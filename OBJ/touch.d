@@ -4,7 +4,7 @@
 ..\obj\touch.o: ..\USER\stm32f4xx.h
 ..\obj\touch.o: ..\USER\stm32f429xx.h
 ..\obj\touch.o: ..\CORE\core_cm4.h
-..\obj\touch.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\touch.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\touch.o: ..\CORE\core_cmInstr.h
 ..\obj\touch.o: ..\CORE\cmsis_armcc.h
 ..\obj\touch.o: ..\CORE\core_cmFunc.h
@@ -16,7 +16,7 @@
 ..\obj\touch.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 ..\obj\touch.o: ..\USER\stm32f4xx.h
 ..\obj\touch.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\touch.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\touch.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\touch.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\touch.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\touch.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -76,8 +76,8 @@
 ..\obj\touch.o: ..\HARDWARE\TOUCH\gt9147.h
 ..\obj\touch.o: ..\HARDWARE\TOUCH\ft5206.h
 ..\obj\touch.o: ..\HARDWARE\LCD\lcd.h
-..\obj\touch.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\touch.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\touch.o: ..\SYSTEM\delay\delay.h
-..\obj\touch.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
+..\obj\touch.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\touch.o: ..\HARDWARE\24CXX\24cxx.h
 ..\obj\touch.o: ..\HARDWARE\IIC\myiic.h

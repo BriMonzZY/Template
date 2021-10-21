@@ -237,7 +237,7 @@ void Draw_MAUAL_Screen(void)
 		LCD_DrawRectangle(140, 360, 180, 400);	//enter
 
 		POINT_COLOR=CYAN;
-		LCD_ShowString(150,200,120,120,24,(u8*)"Distance");
+		LCD_ShowString(150,200,120,120,24,(u8*)"num2");
 		LCD_ShowString(145,245,120,120,24,(u8*)"1");
 		LCD_ShowString(185,245,120,120,24,(u8*)"2");
 		LCD_ShowString(225,245,120,120,24,(u8*)"3");
@@ -270,7 +270,7 @@ void Draw_MAUAL_Screen(void)
 		LCD_DrawRectangle(70, 130, 200, 170);  // fire
 		
 		POINT_COLOR=CYAN;
-		LCD_ShowString(20,200,120,120,24,(u8*)"Angle");
+		LCD_ShowString(20,200,120,120,24,(u8*)"num1");
 		LCD_ShowString(145-130,245,120,120,24,(u8*)"1");
 		LCD_ShowString(185-130,245,120,120,24,(u8*)"2");
 		LCD_ShowString(225-130,245,120,120,24,(u8*)"3");
@@ -284,7 +284,7 @@ void Draw_MAUAL_Screen(void)
 		LCD_ShowString(95,365,120,120,24,(u8*)"Ba");  /* ÍË¸ñ */
 		LCD_ShowString(15,365,120,120,24,(u8*)"Cl");  /* Çå³ı */
 		LCD_ShowString(100,440,200,120,24,(u8*)"back to init");
-		LCD_ShowString(110,135,200,120,24,(u8*)"Confirm");
+		LCD_ShowString(100,135,200,120,24,(u8*)"Confirm");
 		
 		
 		LCD_ShowString(20,60,120,120,24,(u8*)"num1:");
@@ -470,7 +470,7 @@ void MANUAL_Action(void)
 			/* manualInputNum2 1 */
 			if(tp_dev.x[t] >= 140 && tp_dev.x[t] <= 180 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){
 				BEEP_ONCE();
-				manualInputNum1 = manualInputNum1*10 + 1;
+				manualInputNum2 = manualInputNum2*10 + 1;
 			}
 			/* manualInputNum2 2 */
 			if(tp_dev.x[t] >= 180 && tp_dev.x[t] <= 220 && tp_dev.y[t] >= 240 && tp_dev.y[t] <= 280){

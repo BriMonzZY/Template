@@ -8,7 +8,7 @@
 ..\obj\stack.o: ..\USER\stm32f4xx.h
 ..\obj\stack.o: ..\USER\stm32f429xx.h
 ..\obj\stack.o: ..\CORE\core_cm4.h
-..\obj\stack.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\stack.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stack.o: ..\CORE\core_cmInstr.h
 ..\obj\stack.o: ..\CORE\cmsis_armcc.h
 ..\obj\stack.o: ..\CORE\core_cmFunc.h
@@ -16,7 +16,7 @@
 ..\obj\stack.o: ..\USER\system_stm32f4xx.h
 ..\obj\stack.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\obj\stack.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\stack.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stack.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\stack.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\stack.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\stack.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -81,7 +81,7 @@
 ..\obj\stack.o: ..\HARDWARE\LED\led.h
 ..\obj\stack.o: ..\HARDWARE\KEY\key.h
 ..\obj\stack.o: ..\HARDWARE\LCD\lcd.h
-..\obj\stack.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\stack.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\stack.o: ..\HARDWARE\SDRAM\sdram.h
 ..\obj\stack.o: ..\HARDWARE\TOUCH\touch.h
 ..\obj\stack.o: ..\HARDWARE\TOUCH\ott2001a.h
@@ -98,6 +98,6 @@
 ..\obj\stack.o: ..\HARDWARE\icm20602\SEEKFREE_ICM20602.h
 ..\obj\stack.o: ..\HARDWARE\icm20602\attitude_solution.h
 ..\obj\stack.o: ..\HARDWARE\control\control.h
-..\obj\stack.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
-..\obj\stack.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
-..\obj\stack.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\stack.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\stack.o: D:\app\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stack.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h

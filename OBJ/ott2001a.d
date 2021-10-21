@@ -4,7 +4,7 @@
 ..\obj\ott2001a.o: ..\USER\stm32f4xx.h
 ..\obj\ott2001a.o: ..\USER\stm32f429xx.h
 ..\obj\ott2001a.o: ..\CORE\core_cm4.h
-..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\ott2001a.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\ott2001a.o: ..\CORE\core_cmInstr.h
 ..\obj\ott2001a.o: ..\CORE\cmsis_armcc.h
 ..\obj\ott2001a.o: ..\CORE\core_cmFunc.h
@@ -16,7 +16,7 @@
 ..\obj\ott2001a.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 ..\obj\ott2001a.o: ..\USER\stm32f4xx.h
 ..\obj\ott2001a.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\ott2001a.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\ott2001a.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\ott2001a.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\ott2001a.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -86,7 +86,7 @@
 ..\obj\ott2001a.o: ..\HARDWARE\LED\led.h
 ..\obj\ott2001a.o: ..\HARDWARE\KEY\key.h
 ..\obj\ott2001a.o: ..\HARDWARE\LCD\lcd.h
-..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\ott2001a.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\ott2001a.o: ..\HARDWARE\SDRAM\sdram.h
 ..\obj\ott2001a.o: ..\HARDWARE\screen app\screen_app.h
 ..\obj\ott2001a.o: ..\HARDWARE\ips114\SEEKFREE_IPS114_SPI.h
@@ -99,6 +99,6 @@
 ..\obj\ott2001a.o: ..\HARDWARE\icm20602\SEEKFREE_ICM20602.h
 ..\obj\ott2001a.o: ..\HARDWARE\icm20602\attitude_solution.h
 ..\obj\ott2001a.o: ..\HARDWARE\control\control.h
-..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
-..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
-..\obj\ott2001a.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\ott2001a.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\ott2001a.o: D:\app\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ott2001a.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h

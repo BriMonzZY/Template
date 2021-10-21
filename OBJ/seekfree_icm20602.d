@@ -7,7 +7,7 @@
 ..\obj\seekfree_icm20602.o: ..\USER\stm32f4xx.h
 ..\obj\seekfree_icm20602.o: ..\USER\stm32f429xx.h
 ..\obj\seekfree_icm20602.o: ..\CORE\core_cm4.h
-..\obj\seekfree_icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\seekfree_icm20602.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\seekfree_icm20602.o: ..\CORE\core_cmInstr.h
 ..\obj\seekfree_icm20602.o: ..\CORE\cmsis_armcc.h
 ..\obj\seekfree_icm20602.o: ..\CORE\core_cmFunc.h
@@ -15,7 +15,7 @@
 ..\obj\seekfree_icm20602.o: ..\USER\system_stm32f4xx.h
 ..\obj\seekfree_icm20602.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\obj\seekfree_icm20602.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\seekfree_icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\seekfree_icm20602.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\seekfree_icm20602.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\seekfree_icm20602.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\seekfree_icm20602.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -80,7 +80,7 @@
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\LED\led.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\KEY\key.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\LCD\lcd.h
-..\obj\seekfree_icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\seekfree_icm20602.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\SDRAM\sdram.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\TOUCH\touch.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\TOUCH\ott2001a.h
@@ -97,6 +97,6 @@
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\icm20602\SEEKFREE_ICM20602.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\icm20602\attitude_solution.h
 ..\obj\seekfree_icm20602.o: ..\HARDWARE\control\control.h
-..\obj\seekfree_icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
-..\obj\seekfree_icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
-..\obj\seekfree_icm20602.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\seekfree_icm20602.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\seekfree_icm20602.o: D:\app\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\seekfree_icm20602.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h

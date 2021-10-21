@@ -51,6 +51,11 @@ int main(void)
 					delay_ms(50);
 				}
 			}
+			if(!(tp_dev.sta&TP_PRES_DOWN)) {   	/* 触摸屏被松开 */ 
+				if(!(tp_dev.sta&TP_PRES_DOWN)){		/* 触摸屏被松开 */
+					screen_cnt = 0;
+				}
+			}
 		#endif
 		
 		/* 状态机逻辑判断 */
@@ -95,7 +100,7 @@ void globalInit(void)
 	
 	
 	/* 初始化LCD */
-	#if defined(USE_LCD) && defined(NOT_USE_STEER)
+	#if defined(USE_LCD) && defined(NOT_USE_STEER) && defined(NOT_USE_STEER)
 		SDRAM_Init();                   					/* 初始化SDRAM*/
 		LCD_Init();                     					/* 初始化LCD */
 		tp_dev.init();				    					/* 触摸屏初始化 */ 

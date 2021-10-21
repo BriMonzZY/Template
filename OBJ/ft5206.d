@@ -4,7 +4,7 @@
 ..\obj\ft5206.o: ..\USER\stm32f4xx.h
 ..\obj\ft5206.o: ..\USER\stm32f429xx.h
 ..\obj\ft5206.o: ..\CORE\core_cm4.h
-..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\ft5206.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\ft5206.o: ..\CORE\core_cmInstr.h
 ..\obj\ft5206.o: ..\CORE\cmsis_armcc.h
 ..\obj\ft5206.o: ..\CORE\core_cmFunc.h
@@ -16,7 +16,7 @@
 ..\obj\ft5206.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 ..\obj\ft5206.o: ..\USER\stm32f4xx.h
 ..\obj\ft5206.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\ft5206.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\ft5206.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\obj\ft5206.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\obj\ft5206.o: ..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -77,7 +77,7 @@
 ..\obj\ft5206.o: ..\HARDWARE\TOUCH\gt9147.h
 ..\obj\ft5206.o: ..\HARDWARE\TOUCH\ctiic.h
 ..\obj\ft5206.o: ..\HARDWARE\LCD\lcd.h
-..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\ft5206.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\ft5206.o: ..\HARDWARE\uart\usart.h
 ..\obj\ft5206.o: ..\USER\main.h
 ..\obj\ft5206.o: ..\HARDWARE\uart\usart.h
@@ -99,6 +99,6 @@
 ..\obj\ft5206.o: ..\HARDWARE\icm20602\SEEKFREE_ICM20602.h
 ..\obj\ft5206.o: ..\HARDWARE\icm20602\attitude_solution.h
 ..\obj\ft5206.o: ..\HARDWARE\control\control.h
-..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\math.h
-..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\string.h
-..\obj\ft5206.o: D:\app\keilARM\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\ft5206.o: D:\app\keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\ft5206.o: D:\app\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ft5206.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h

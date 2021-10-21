@@ -673,6 +673,11 @@
           <GroupName>APP</GroupName>
           <Files>
             <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\main.h</FilePath>
+            </File>
+            <File>
               <FileName>beep.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\BEEP\beep.c</FilePath>
